@@ -45,8 +45,12 @@ console.log("a:", a, "b:", b, "c:", c, "d:", d);
 
 /* Exercise 1: Write a function called combineArrays that takes in two arrays as arguments, and returns a single array that combines both (using the spread operator). */
 
+const sports = ['football', 'basketball', 'golf'];
+const moreSports = ['boxing', 'tennis', 'mma'];
+combineSports = (games1, games2) => [...games1, ...games2];
 
 
+console.log(combineSports(sports,moreSports));
 /* Exercise 2: Write a function called addEveryOther that takes in any amount of arguments, and returns the sum of every other argument. */
 
 
