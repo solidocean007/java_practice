@@ -6,7 +6,7 @@ const names = ['John', 'Jacob', 'Jingleheimer'];
 
 const [name1, name2, ...rest] = names;
 
-console.log(name1 + name2);
+// console.log(name1 + name2);
 
 
 /* Destructuring Functions
@@ -16,7 +16,7 @@ Exercise 2: Destructure the first two items returned from the function and store
 const foo = () => [1, 2, 3];
 foo();
 const [a, b, c] = foo()
-console.log(a, b);
+// console.log(a, b);
 
 
 
@@ -27,7 +27,7 @@ let d = 'Jack';
 let e = 'Jill';
 // your code
 [d,e] = [e,d];
-console.log('d:', d, 'd:',e);
+// console.log('d:', d, 'd:',e);
 // => a: Jill b: Jack
 
 
@@ -39,7 +39,7 @@ Using array destructuring, accomplish the following output. Carefully study the 
 
 const array = [1, [2, [[[3, 4], 5], 6]]];
 // your code
-console.log("a:", a, "b:", b, "c:", c, "d:", d);
+// console.log("a:", a, "b:", b, "c:", c, "d:", d);
 // => a: 1 b: 2 c: [ [ 3, 4 ], 5 ] d: 6
 
 
@@ -50,7 +50,7 @@ const moreSports = ['boxing', 'tennis', 'mma'];
 combineArrays = (games1, games2) => [...games1, ...games2];
 
 
-console.log(combineArrays(sports,moreSports));
+// console.log(combineArrays(sports,moreSports));
 
 
 
@@ -69,14 +69,13 @@ for(i=0; i < exercise2Array.length; i++) {
 
 let addEveryOther = newArray.reduce(function(a,b,i){ return a + b;});
 
-console.log(addEveryOther);
+// console.log(addEveryOther);
 
 // => addEveryOther(4, 7, 3, 2, 10) // 17
 // => addEveryOther(2, 8, 3, 1) // 5
 
 
 
-const shoes = ['Nike SB', 'Emerica', 'Supra', 'Vans'];
 
 // for(let i = 0; i < shoes.length; i += 1) {
 //   console.log(shoes[i]);
@@ -90,9 +89,40 @@ const shoes = ['Nike SB', 'Emerica', 'Supra', 'Vans'];
 //   console.log(shoes[index]);
 // }
 
-for ( const shoe of shoes) {
-  if (shoe === 'Supra') {
-    break;
+const shoes = ['Nike SB', 'Emerica', 'Supra', 'Vans'];
+
+// const shoe = shoes.entries();
+// console.log(shoe);
+
+// for ( const [i, shoe] of shoes.entries()) {
+//     console.log(`${shoe} is the ${i} index`);
+//   }
+
+
+function addTotal() {
+  let total = 0;
+  for(const num of arguments) {
+    total += num;
   }
-  console.log(shoe);
+  console.log(total);
+  return total
+
+}  
+
+// addTotal(12,23,45,56,78,65)
+
+const name = 'Clinton Williams';
+
+for(const char of name) {
+  // console.log(char);
+
 }
+
+const header = document.querySelectorAll('h5');
+
+for(const h of header) {
+  h.addEventListener('click', function() {
+    console.log(this.textContent)
+  })
+}
+// console.log(header);
