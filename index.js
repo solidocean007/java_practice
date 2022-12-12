@@ -47,13 +47,52 @@ console.log("a:", a, "b:", b, "c:", c, "d:", d);
 
 const sports = ['football', 'basketball', 'golf'];
 const moreSports = ['boxing', 'tennis', 'mma'];
-combineSports = (games1, games2) => [...games1, ...games2];
+combineArrays = (games1, games2) => [...games1, ...games2];
 
 
-console.log(combineSports(sports,moreSports));
+console.log(combineArrays(sports,moreSports));
+
+
+
+
 /* Exercise 2: Write a function called addEveryOther that takes in any amount of arguments, and returns the sum of every other argument. */
 
+const exercise2Array = [4, 7, 3, 2, 10];
+let newArray = [];
+for(i=0; i < exercise2Array.length; i++) {
+  if (i % 2 === 0 ) { newArray.push(exercise2Array[i])}
+}
+// console.log(newArray);
+// let myFunction = (...spread) => spread.filter() % 2 === 0; console.log(myFunction(exercise2Array))
 
+// let everyOtherIndexItem = exercise2Array.every(myFunction);
+
+let addEveryOther = newArray.reduce(function(a,b,i){ return a + b;});
+
+console.log(addEveryOther);
 
 // => addEveryOther(4, 7, 3, 2, 10) // 17
 // => addEveryOther(2, 8, 3, 1) // 5
+
+
+
+const shoes = ['Nike SB', 'Emerica', 'Supra', 'Vans'];
+
+// for(let i = 0; i < shoes.length; i += 1) {
+//   console.log(shoes[i]);
+// }
+
+// shoes.forEach((shoe) => {
+//   console.log(shoe);
+// })
+
+// for(const index in shoes) {
+//   console.log(shoes[index]);
+// }
+
+for ( const shoe of shoes) {
+  if (shoe === 'Supra') {
+    break;
+  }
+  console.log(shoe);
+}
