@@ -91,23 +91,23 @@ let addEveryOther = newArray.reduce(function(a,b,i){ return a + b;});
 
 const shoes = ['Nike SB', 'Emerica', 'Supra', 'Vans'];
 
-// const shoe = shoes.entries();
-// console.log(shoe);
+const shoe = shoes.entries();
+console.log(shoe);
 
-// for ( const [i, shoe] of shoes.entries()) {
-//     console.log(`${shoe} is the ${i} index`);
-//   }
-
-
-function addTotal() {
-  let total = 0;
-  for(const num of arguments) {
-    total += num;
+for ( const [i, shoe] of shoes.entries()) {
+    console.log(`${shoe} is the ${i} index`);
   }
-  console.log(total);
-  return total
 
-}  
+
+// function addTotal() {
+//   let total = 0;
+//   for(const num of arguments) {
+//     total += num;
+//   }
+//   console.log(total);
+//   return total
+
+// }  
 
 // addTotal(12,23,45,56,78,65)
 
@@ -122,7 +122,7 @@ const header = document.querySelectorAll('h5');
 
 for(const h of header) {
   h.addEventListener('click', function() {
-    console.log(this.textContent)
+    // console.log(this.textContent)
   })
 }
 // console.log(header);
