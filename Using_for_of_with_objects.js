@@ -7,5 +7,5 @@ const skater = {
 };
 
 for(const [prop, value] of Object.entries(skater)) {
-  console.log(prop, value);
+  // console.log(prop, value);
 }

@@ -92,10 +92,10 @@ let addEveryOther = newArray.reduce(function(a,b,i){ return a + b;});
 const shoes = ['Nike SB', 'Emerica', 'Supra', 'Vans'];
 
 const shoe = shoes.entries();
-console.log(shoe);
+// console.log(shoe);
 
 for ( const [i, shoe] of shoes.entries()) {
-    console.log(`${shoe} is the ${i} index`);
+    // console.log(`${shoe} is the ${i} index`);
   }
 
 
