@@ -4,7 +4,7 @@ people.set('Jason', 1);
 people.set('Nathan', 2);
 people.set('Jared', 3);
 
-console.log(people);
+// console.log(people);
 
 
 
