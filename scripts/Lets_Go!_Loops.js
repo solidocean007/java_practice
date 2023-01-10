@@ -7,9 +7,9 @@ Practice 1: Create a loop that runs through each item in the fruits array. */
 const fruits = ["Apple", "Banana", "Orange"];
 // => Apple Banana Orange
 
-/* for(i = 0; i < fruits.length; i += 1) {
+for(i = 0; i < fruits.length; i += 1) {
   console.log(fruits[i]);
-} */
+}
 
 /* let x = 0;
 while(x < fruits.length) {

@@ -6,6 +6,6 @@ const skater = {
   ankleInjuries: 57,
 };
 
-for(const [prop, value] of Object.entries(skater)) {
-  // console.log(prop, value);
+for(const [prop] of Object.entries(skater)) {
+  console.log(prop);
 }
