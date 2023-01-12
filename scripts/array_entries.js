@@ -15,8 +15,19 @@ for (let x of f) {
   AlienTrash : 4
   };
 
-  let spaceStuff = Object.keys(asteroids);
+  function biggestValue (obj) {
+    let result = [];
+    let biggestRockName =  '';
+    for(const [rockName, rockSize] of Object.entries(obj)) {
+      // console.log(rockSize);
+     if(rockSize > result){
+      biggestRockName = rockName;
+     }
+    }
+   return result;
 
-  console.log(spaceStuff)
+  }
+
+  console.log(biggestValue(asteroids));
 
   
