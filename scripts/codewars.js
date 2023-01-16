@@ -1,60 +1,61 @@
-// const string = 'The greatest victory is one two three that which requires no battle.'
+const size = 10;
+const boardLetters = ['A','B','C','D','E','F','G','H','I','J'];
 
-// function reversedWords(str) {
-//   return (str.split(' ').reverse()).join(' ');
+// This function builds an array of objects that represent the plots of the board.
+function gameBoardData(size) {
+  let plotCount = 1;
+  let gameBoardData = [];
+  for(let i = 0; i < size; i++) {
+    let xChar = boardLetters[i];
+    for(let j = 0; j < size; j++) {
+      let yNumber = i++;
+      gameBoardData.push({id : xChar + yNumber, index : plotCount})
+      plotCount++
+    }
+  }
+  return gameBoardData;
+ }
+
+ class ship {
+  constructor(length, direction){
+    this.length = length;
+    this.direction = direction;
+  }
+ }
+
+ console.log(gameBoardData(size));
+ 
+
+
+
+// const boardLetters = ['A','B','C','D','E','F','G','H','I','J'];
+// const boardSize = 10;
+// let enemyBoats = [];
+
+//   for(let i = 0; i <= 20; i++) { 
+//     let shipCount = 0;
+//     let newShip;
+//     let xCoord;
+//     let yCoord;
+//       xCoord = boardLetters[Math.floor(Math.random() * (boardSize))]
+//       yCoord = Math.floor(Math.random() * (boardSize) + 1)
+//       newShip = (xCoord + yCoord); 
+//       if(enemyBoats.indexOf(newShip) === -1){
+//         enemyBoats.push(newShip);
+//         shipCount++
+//       }
+//     }  
+
+//     console.log (enemyBoats);
+// var readlineSync = require('readline-sync');
+
+// let endGame = true;
+
+// do {
+// console.log('start code');
+// endGame = readlineSync.keyInYN('Yes or No')
+// if(endGame === 'Y') {
+//   endGame = false;
 // }
 
-// console.log(reversedWords(string));
-
-const betweenThis = -1;
-const betweenThat = 2;
-
-function getSum (firstNum, secondNum) {
-  if(firstNum != secondNum) {
-    console.log(firstNum);
-    console.log(secondNum);
-    let bigNum = 0;
-    console.log(bigNum);
-    let smallNum = 0;
-    console.log(smallNum);
-
-    if (firstNum < secondNum) {
-      smallNum = firstNum;
-    console.log(smallNum);
-
-      bigNum = secondNum;
-    console.log(bigNum);
-
-    } else {
-      bigNum = firstNum;
-      console.log(bigNum);
-
-      smallNum = secondNum;
-      console.log(smallNum);
-
-    }
-    if((bigNum - smallNum) != 1){
-      let nextNum = smallNum + 1;
-      let total = smallNum;
-      console.log(total);
-      for( let i = smallNum; i < bigNum; i++) {
-        
-        console.log(i);
-        
-        total = total + nextNum;
-
-        console.log(total);
-        nextNum++
-        console.log(nextNum)
-      }
-      return total;
-
-    } else {
-      return bigNum + smallNum
-    }
-  } else {
-    return firstNum
-  }
-}
-
-console.log(getSum(betweenThis, betweenThat));
+// } while (endGame)
