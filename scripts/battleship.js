@@ -33,17 +33,18 @@ function gameBoardData(size) {
 
 const plots = gameBoardData(boardSize);
  
-function shipBuild(ship){
-  for(let i = 0; i < ship; i++){
+function shipBuild(shipSize){
+  for(let i = 0; i < shipSize; i++){
     start = Math.floor(Math.random()*100)
-    console.log(start);
+    console.log(start + ': is start');
   }
 }
 
 shipBuild(shipFive);
 
+// This function produces a random direction.  Horizontal or vertical.
 function chooseDirection(){
-  let theWay = (Math.random > .5) ? 'vertical' : 'horizontal'
+  return numberUnit = (Math.random() > .5) ? 'vertical' : 'horizontal';
   }
 
-  console.log(chooseDirection())
+console.log(chooseDirection())
